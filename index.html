@@ -243,8 +243,8 @@ select.sort{width:100%;padding:8px 10px;border:1px solid var(--hairline);border-
    from the `tours_with_port` view and save packs to the
    `itineraries` / `itinerary_items` tables.
    Leave blank to run on the embedded programme data.   */
-const SUPABASE_URL = "";       // e.g. "https://xyzcompany.supabase.co"
-const SUPABASE_ANON_KEY = "";
+const SUPABASE_URL = "https://aierewhosxckxlfrcruf.supabase.co";       // e.g. "https://xyzcompany.supabase.co"
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFpZXJld2hvc3hja3hsZnJjcnVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExMjEzOTEsImV4cCI6MjA5NjY5NzM5MX0.tLO3ncU3HbTUOXyEd9bXL3hDtEVpqW0FEQxRqL7n5aM";
 
 /* ============ EMBEDDED DATA (fallback) ============ */
 const PORTS = [{"date": "2026-06-11", "port": "Fusina (Venice)", "country": "Italy", "arr": null, "dep": "7:00 PM"}, {"date": "2026-06-12", "port": "Zadar", "country": "Croatia", "arr": "8:00 AM", "dep": "6:00 PM"}, {"date": "2026-06-13", "port": "Hvar", "country": "Croatia", "arr": "8:00 AM", "dep": "6:00 PM"}, {"date": "2026-06-14", "port": "Dubrovnik", "country": "Croatia", "arr": "8:00 AM", "dep": "9:00 PM"}, {"date": "2026-06-15", "port": "Bari", "country": "Italy", "arr": "8:00 AM", "dep": "7:00 PM"}, {"date": "2026-06-16", "port": "Kotor", "country": "Montenegro", "arr": "8:00 AM", "dep": "6:00 PM"}, {"date": "2026-06-17", "port": "Gallipoli", "country": "Italy", "arr": "10:30 AM", "dep": "8:30 PM"}, {"date": "2026-06-18", "port": "Sarande", "country": "Albania", "arr": "8:30 AM", "dep": "6:00 PM"}, {"date": "2026-06-19", "port": "Day at sea", "country": null, "arr": null, "dep": null}, {"date": "2026-06-20", "port": "Valletta", "country": "Malta", "arr": "7:00 AM", "dep": "6:00 PM"}, {"date": "2026-06-21", "port": "Giardini Naxos (Sicily)", "country": "Italy", "arr": "8:00 AM", "dep": "5:00 PM"}, {"date": "2026-06-22", "port": "Naples", "country": "Italy", "arr": "8:00 AM", "dep": "6:00 PM"}, {"date": "2026-06-23", "port": "Civitavecchia (Rome)", "country": "Italy", "arr": "8:00 AM", "dep": null}];
