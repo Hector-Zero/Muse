@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2740%27 fill=%27%230c2b3c%27/%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2716%27 fill=%27%23b08d3e%27/%3E%3C/svg%3E">
 <title>Silver Muse · Shore Excursion Planner · SM260611012</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -55,22 +56,7 @@ h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4
 .shell{max-width:1460px;margin:0 auto;padding:26px 28px 90px;display:grid;grid-template-columns:286px 1fr;gap:26px;align-items:start}
 @media(max-width:980px){.shell{grid-template-columns:1fr}}
 
-/* ---------- MOBILE FILTER SHEET ---------- */
-.open-filters{display:none}
-.f-apply{display:none}
-@media(max-width:980px){
-  .open-filters{display:flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--hairline);border-radius:999px;padding:9px 18px;font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--ink)}
-  .open-filters .fn{background:var(--brass);color:var(--white);border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;font-size:11px}
-  aside.filters{position:fixed;inset:0;z-index:55;max-height:none;height:100dvh;border-radius:0;border:none;transform:translateY(100%);transition:transform .28s ease;display:flex;flex-direction:column;visibility:hidden}
-  aside.filters.open{transform:none;visibility:visible}
-  aside.filters .f-scroll{flex:1;overflow-y:auto;padding-bottom:10px}
-  .f-apply{display:block;position:sticky;bottom:0;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:var(--white);border-top:1px solid var(--hairline);box-shadow:0 -10px 24px rgba(12,43,60,.08)}
-  .f-apply button{width:100%;padding:14px 0;border-radius:9px;border:none;background:var(--ink);color:var(--white);font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:.02em}
-  .f-apply button:active{background:var(--ink-2)}
-  .f-head .x{display:inline-block}
-  body.sheet-open{overflow:hidden}
-}
-.f-head .x{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink);line-height:1;padding:0 2px}
+
 
 /* ---------- FILTERS ---------- */
 aside.filters{position:sticky;top:14px;background:var(--white);border:1px solid var(--hairline);border-radius:var(--r);box-shadow:var(--shadow);max-height:calc(100vh - 28px);overflow-y:auto;scrollbar-width:thin}
@@ -157,9 +143,25 @@ select.sort{width:100%;padding:8px 10px;border:1px solid var(--hairline);border-
 .tot .grand{font-size:17px;color:var(--brass)}
 .d-foot .row{display:flex;gap:8px;margin-top:12px}
 .d-empty{text-align:center;color:var(--seaglass);padding:50px 10px;font-size:13.5px}
-.src{position:fixed;left:18px;bottom:14px;font-size:10.5px;color:#7d96a4;letter-spacing:.05em;z-index:5}
 .toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);background:var(--ink);color:var(--white);padding:10px 20px;border-radius:8px;font-size:13px;z-index:60;opacity:0;transition:.25s;pointer-events:none}
 .toast.show{opacity:1}
+.f-head .x{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink);line-height:1;padding:0 2px}
+/* ---------- MOBILE FILTER SHEET ---------- */
+.open-filters{display:none}
+.f-apply{display:none}
+@media(max-width:980px){
+  .open-filters{display:flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--hairline);border-radius:999px;padding:9px 18px;font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--ink)}
+  .open-filters .fn{background:var(--brass);color:var(--white);border-radius:999px;min-width:20px;height:20px;display:grid;place-items:center;font-size:11px}
+  aside.filters{position:fixed;inset:0;z-index:55;max-height:none;height:100dvh;border-radius:0;border:none;transform:translateY(100%);transition:transform .28s ease;display:flex;flex-direction:column;visibility:hidden}
+  aside.filters.open{transform:none;visibility:visible}
+  aside.filters .f-scroll{flex:1;overflow-y:auto;padding-bottom:10px}
+  .f-apply{display:block;position:sticky;bottom:0;padding:12px 18px calc(12px + env(safe-area-inset-bottom));background:var(--white);border-top:1px solid var(--hairline);box-shadow:0 -10px 24px rgba(12,43,60,.08)}
+  .f-apply button{width:100%;padding:14px 0;border-radius:9px;border:none;background:var(--ink);color:var(--white);font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:.02em}
+  .f-apply button:active{background:var(--ink-2)}
+  .f-head .x{display:inline-block}
+  body.sheet-open{overflow:hidden}
+}
+
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @media(max-width:680px){.shell{padding:18px 14px 90px}header{padding:26px 16px 0}}
 </style>
@@ -255,7 +257,6 @@ select.sort{width:100%;padding:8px 10px;border:1px solid var(--hairline);border-
   </div>
 </div>
 
-<div class="src" id="src"></div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -313,12 +314,12 @@ async function loadData(){
         dress:r.dress_code, age:r.min_age, desc:r.short_desc, notes:r.notes
       }));
       sbReady = true;
-      $("src").textContent = "data · supabase · "+TOURS.length+" tours";
+      console.info("data source: supabase ·", TOURS.length, "tours");
       return;
     }catch(e){ console.warn("Supabase load failed, using embedded data:", e.message); }
   }
   TOURS = EMBEDDED;
-  $("src").textContent = "data · embedded programme (set SUPABASE_URL to go live) · "+TOURS.length+" tours";
+  console.info("data source: embedded programme (set SUPABASE_URL to go live) ·", TOURS.length, "tours");
 }
 
 /* ---------- filtering ---------- */
